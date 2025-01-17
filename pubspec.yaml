@@ -1,0 +1,34 @@
+name: qode
+description: "A new Flutter project."
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.6.1
+
+dependencies:
+  cupertino_icons: ^1.0.8
+  flutter:
+    sdk: flutter
+
+  # status
+  flutter_riverpod: ^2.6.1
+  riverpod_annotation: ^2.6.1
+  
+  # QR Code
+  qr_flutter: ^4.1.0
+
+dev_dependencies:
+  flutter_lints: ^5.0.0
+  flutter_test:
+    sdk: flutter
+  
+  # code generator
+  build_runner: ^2.4.14
+  riverpod_generator: ^2.6.4
+
+flutter:
+
+  uses-material-design: true
