@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:qode/core/layout/widgets/layout_test_page.dart';
 import 'package:qode/core/localization/generated/l10n.dart';
 import 'package:qode/core/localization/provider/locale_provider.dart';
-import 'package:qode/core/theme/pages/theme_test_page.dart';
 import 'package:qode/core/theme/providers/theme_provider.dart';
 
 void main() {
@@ -35,7 +35,7 @@ class MyApp extends ConsumerWidget {
       supportedLocales: LocaleState.supportedLocales,
       title: 'QR 코드 생성기',
       theme: theme.themeData,
-      home: const ThemeTestPage(),
+      home: const LayoutTestPage(),
     );
   }
 }
