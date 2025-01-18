@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:qode/core/localization/pages/locale_test_page.dart';
 import 'package:qode/core/theme/foundation/app_theme.dart';
 import 'package:qode/core/theme/providers/theme_provider.dart';
 
@@ -20,6 +21,20 @@ class ThemeTestPage extends ConsumerWidget {
         backgroundColor: color.surface,
         title: Text('테마 테스트', style: font.titleLarge),
         actions: [
+          // 로케일 테스트 페이지 이동 버튼
+          IconButton(
+            icon: Icon(
+              Icons.language,
+              color: color.text,
+            ),
+            onPressed: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const LocaleTestPage(),
+              ),
+            ),
+          ),
+          // 테마 토글 버튼
           IconButton(
             icon: Icon(
               theme.mode == AppMode.light ? Icons.dark_mode : Icons.light_mode,

@@ -1,0 +1,15 @@
+{
+  "@@locale": "en",
+  "appName": "QR Code Generator",
+  "@appName": {
+      "description": "The application name"
+  },
+  "settings": "Settings",
+  "@settings": {
+      "description": "Settings menu title"
+  },
+  "language": "Language",
+  "@language": {
+      "description": "Language selection option"
+  }
+}
