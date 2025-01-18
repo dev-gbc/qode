@@ -7,21 +7,22 @@ class DarkTheme implements AppTheme {
   static final DarkTheme _instance = DarkTheme._internal();
   factory DarkTheme() => _instance;
   DarkTheme._internal() {
-    _color = AppColor(
-      background: const Color(0xFF1A1A1A),
-      surface: const Color(0xFF242424),
-      text: const Color(0xFFF1F1F1),
-      hint: const Color(0xFF8E8E8E),
-      primary: const Color(0xFF6C85F2),
-      onPrimary: const Color(0xFF1A1A1A),
-      error: const Color(0xFFEF5350),
-      onError: const Color(0xFF1A1A1A),
+    _color = const AppColor(
+      background: Color(0xFF1A1A1A),
+      surface: Color(0xFF242424),
+      text: Color(0xFFF1F1F1),
+      hint: Color(0xFF8E8E8E),
+      primary: Color(0xFF6C85F2),
+      onPrimary: Color(0xFF1A1A1A),
+      error: Color(0xFFEF5350),
+      onError: Color(0xFF1A1A1A),
     );
 
     _font = AppFont(
       font: const Pretendard(),
       textColor: _color.text,
       hintColor: _color.hint,
+      onPrimaryColor: _color.onPrimary,
     );
   }
 
@@ -49,11 +50,12 @@ class DarkTheme implements AppTheme {
           onError: _color.onError,
           surface: _color.surface,
         ),
-        textTheme: TextTheme(
-          bodyLarge: _font.bodyLarge,
-          bodyMedium: _font.bodyMedium,
-          bodySmall: _font.bodySmall,
-          titleLarge: _font.titleLarge,
-        ),
+
+        // textTheme: TextTheme(
+        //   bodyLarge: _font.bodyLarge,
+        //   bodyMedium: _font.bodyMedium,
+        //   bodySmall: _font.bodySmall,
+        //   titleLarge: _font.titleLarge,
+        // ),
       );
 }

@@ -12,14 +12,14 @@ class ThemeTestPage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final theme = ref.theme;
-    final color = ref.color;
-    final font = ref.font;
+    final color = theme.color;
+    final font = theme.font;
 
     return Scaffold(
       backgroundColor: color.background,
       appBar: AppBar(
         backgroundColor: color.surface,
-        title: Text('테마 테스트', style: font.titleLarge),
+        title: Text('테마 테스트', style: font.title1),
         actions: [
           // 로케일 테스트 페이지 이동 버튼
           IconButton(
@@ -75,15 +75,15 @@ class ThemeTestPage extends ConsumerWidget {
               content: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Title Large', style: font.titleLarge),
+                  Text('Title 1', style: font.title1),
                   const SizedBox(height: 8),
-                  Text('Body Large', style: font.bodyLarge),
+                  Text('Body 1 Bold', style: font.body1Bold),
                   const SizedBox(height: 8),
-                  Text('Body Medium', style: font.bodyMedium),
+                  Text('Body 1 Medium', style: font.body1Medium),
                   const SizedBox(height: 8),
-                  Text('Body Small', style: font.bodySmall),
+                  Text('Body 2 Bold', style: font.body2Bold),
                   const SizedBox(height: 8),
-                  Text('Hint Text', style: font.hint),
+                  Text('Hint Text', style: font.hintMedium),
                 ],
               ),
               font: font,
@@ -113,7 +113,7 @@ class ThemeTestPage extends ConsumerWidget {
                   TextField(
                     decoration: InputDecoration(
                       hintText: '텍스트 입력',
-                      hintStyle: font.hint,
+                      hintStyle: font.hintMedium,
                       filled: true,
                       fillColor: color.surface,
                       border: OutlineInputBorder(
@@ -134,9 +134,9 @@ class ThemeTestPage extends ConsumerWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('카드 타이틀', style: font.bodyLarge),
+                        Text('카드 타이틀', style: font.body1Medium),
                         const SizedBox(height: 8),
-                        Text('카드 내용', style: font.bodyMedium),
+                        Text('카드 내용', style: font.body2Medium),
                       ],
                     ),
                   ),
@@ -160,7 +160,7 @@ class ThemeTestPage extends ConsumerWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(title, style: font.titleLarge),
+        Text(title, style: font.title1),
         const SizedBox(height: 16),
         content,
       ],

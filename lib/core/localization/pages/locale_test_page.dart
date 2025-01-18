@@ -20,7 +20,7 @@ class LocaleTestPage extends ConsumerWidget {
       backgroundColor: color.background,
       appBar: AppBar(
         backgroundColor: color.surface,
-        title: Text('다국어 테스트', style: font.titleLarge),
+        title: Text('다국어 테스트', style: font.title1),
         actions: [
           // 언어 변경 버튼
           TextButton(
@@ -32,7 +32,7 @@ class LocaleTestPage extends ConsumerWidget {
             },
             child: Text(
               currentLocale.languageCode.toUpperCase(),
-              style: font.bodyMedium.copyWith(color: color.primary),
+              style: font.body1Medium.copyWith(color: color.primary),
             ),
           ),
         ],
@@ -121,9 +121,9 @@ class LocaleTestPage extends ConsumerWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(l10n.appName, style: font.bodyLarge),
+                        Text(l10n.appName, style: font.body1Medium),
                         const SizedBox(height: 8),
-                        Text(l10n.settings, style: font.bodyMedium),
+                        Text(l10n.settings, style: font.body2Medium),
                       ],
                     ),
                   ),
@@ -147,7 +147,7 @@ class LocaleTestPage extends ConsumerWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(title, style: font.titleLarge),
+        Text(title, style: font.title1),
         const SizedBox(height: 16),
         content,
       ],
@@ -186,12 +186,12 @@ class LocaleTestPage extends ConsumerWidget {
         children: [
           Text(
             'Key: $key',
-            style: font.bodySmall.copyWith(color: color.hint),
+            style: font.body3Medium.copyWith(color: color.hint),
           ),
           const SizedBox(height: 4),
           Text(
             'Value: $value',
-            style: font.bodyMedium,
+            style: font.body3Medium,
           ),
         ],
       ),

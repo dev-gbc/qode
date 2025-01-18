@@ -7,14 +7,14 @@ class LightTheme implements AppTheme {
   static final LightTheme _instance = LightTheme._internal();
   factory LightTheme() => _instance;
   LightTheme._internal() {
-    _color = AppColor(
+    _color = const AppColor(
       background: Colors.white,
-      surface: const Color(0xFFF8F9FD),
-      text: const Color(0xFF2B2B2B),
-      hint: const Color(0xFF9BA1B3),
-      primary: const Color(0xFF4F6AF0),
+      surface: Color(0xFFF8F9FD),
+      text: Color(0xFF2B2B2B),
+      hint: Color(0xFF9BA1B3),
+      primary: Color(0xFF4F6AF0),
       onPrimary: Colors.white,
-      error: const Color(0xFFE53935),
+      error: Color(0xFFE53935),
       onError: Colors.white,
     );
 
@@ -22,6 +22,7 @@ class LightTheme implements AppTheme {
       font: const Pretendard(),
       textColor: _color.text,
       hintColor: _color.hint,
+      onPrimaryColor: _color.onPrimary,
     );
   }
 
@@ -49,11 +50,11 @@ class LightTheme implements AppTheme {
           onError: _color.onError,
           surface: _color.surface,
         ),
-        textTheme: TextTheme(
-          bodyLarge: _font.bodyLarge,
-          bodyMedium: _font.bodyMedium,
-          bodySmall: _font.bodySmall,
-          titleLarge: _font.titleLarge,
-        ),
+        // textTheme: TextTheme(
+        //   bodyLarge: _font.bodyLarge,
+        //   bodyMedium: _font.bodyMedium,
+        //   bodySmall: _font.bodySmall,
+        //   titleLarge: _font.titleLarge,
+        // ),
       );
 }
